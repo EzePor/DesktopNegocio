@@ -3,6 +3,7 @@ using DesktopNegocio.Views.Commos;
 using DesktopNegocio.Views.Commos.Impresiones;
 using DesktopNegocio.Views.Commos.Modos_Pagos;
 using DesktopNegocio.Views.Details.CrearPedido;
+using DesktopNegocio.Views.Details.PedidosFiltrados;
 using FontAwesome.Sharp;
 
 
@@ -133,7 +134,7 @@ namespace DesktopNegocio
         {
             ActivateButton(sender, RGBColors.color6);
             labelTituloChildForm.Text = "Pedidos Filtrados";
-            //OpenChildForm(new PedidosFiltradosView());
+            OpenChildForm(new PedidosFiltradosView());
         }
 
         private void iconButtonResumenPedidos_Click(object sender, EventArgs e)
