@@ -58,6 +58,7 @@
             label8 = new Label();
             panel2 = new Panel();
             label11 = new Label();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dataGridDetallePedido).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cantidadImpresion).BeginInit();
@@ -371,12 +372,29 @@
             label11.TabIndex = 6;
             label11.Text = "Total Pedido:";
             // 
+            // iconButton1
+            // 
+            iconButton1.BackColor = Color.Gray;
+            iconButton1.Font = new Font("Bahnschrift SemiCondensed", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            iconButton1.ForeColor = Color.White;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Close;
+            iconButton1.IconColor = Color.White;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.Location = new Point(1267, 696);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Size = new Size(259, 141);
+            iconButton1.TabIndex = 52;
+            iconButton1.Text = "Salir";
+            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton1.UseVisualStyleBackColor = false;
+            // 
             // CrearPedidosView
             // 
             AutoScaleDimensions = new SizeF(9F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 128);
             ClientSize = new Size(1660, 860);
+            Controls.Add(iconButton1);
             Controls.Add(panel2);
             Controls.Add(label8);
             Controls.Add(iconButtonGuardar);
@@ -436,5 +454,6 @@
         private Label label8;
         private Panel panel2;
         private Label label11;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

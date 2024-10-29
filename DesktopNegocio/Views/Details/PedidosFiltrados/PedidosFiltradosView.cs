@@ -158,19 +158,36 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
                 if (dataGridPedidos.Columns[e.ColumnIndex].Name == "Detalle")
                 {
                     // Aquí puedes abrir una ventana para mostrar el detalle del pedido
-                    MessageBox.Show($"Mostrar detalles del pedido ID: {pedidoSeleccionado.id}");
+                    var pedidoSeleccionadoDetalle = pedidosFiltrados[e.RowIndex];
+
+                    // Crea una instancia del formulario de detalles y pásale el pedido seleccionado
+                    DetallePedidoView detalleForm = new DetallePedidoView(pedidoSeleccionado);
+                    detalleForm.ShowDialog(); // Mostrar como un cuadro de diálogo modal
                 }
-                else if (dataGridPedidos.Columns[e.ColumnIndex].Name == "Editar")
+                else if ( dataGridPedidos.Columns[e.ColumnIndex].Name == "Editar")
                 {
-                    // Aquí puedes abrir una ventana para editar el pedido
-                    MessageBox.Show($"Editar pedido ID: {pedidoSeleccionado.id}");
+                    var pedidoSeleccionadoEditar = pedidosFiltrados[e.RowIndex];
+                    var EditarPedido = new EditarPedidoView(pedidoSeleccionadoEditar.id);
+
+                    // Suscribirse al evento PedidoEditado para actualizar la grilla al cerrar el formulario de edición
+                    EditarPedido.PedidoEditado += CargarPedidos;
+
+                    EditarPedido.ShowDialog();
                 }
+
                 else if (dataGridPedidos.Columns[e.ColumnIndex].Name == "Eliminar")
                 {
                     // Aquí puedes eliminar el pedido seleccionado
-                    MessageBox.Show($"Eliminar pedido ID: {pedidoSeleccionado.id}");
+                    MessageBox.Show($"Eliminar pedido ID: ");
                     // Código para eliminar el pedido y actualizar la grilla
                 }
+
+            }
+            else if (e.RowIndex >= 0 && dataGridPedidos.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                var pedidoSeleccionadoEliminar = pedidosFiltrados[e.RowIndex];
+                var EditarPedido = new EditarPedidoView(pedidoSeleccionadoEliminar.id); // Pasar el ID del pedido en lugar del objeto
+                EditarPedido.ShowDialog();
             }
         }
     }
