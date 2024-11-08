@@ -72,11 +72,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Bahnschrift SemiBold Condensed", 24F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(255, 128, 0);
-            label2.Location = new Point(34, 36);
+            label2.Font = new Font("Bahnschrift SemiBold SemiConden", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(152, 20);
             label2.Name = "label2";
-            label2.Size = new Size(234, 48);
+            label2.Size = new Size(327, 57);
             label2.TabIndex = 21;
             label2.Text = "Modos de Pagos:";
             // 
@@ -84,31 +84,31 @@
             // 
             dataGridViewModosPagos.AllowUserToAddRows = false;
             dataGridViewModosPagos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle1.ForeColor = Color.Black;
             dataGridViewCellStyle1.Padding = new Padding(0, 5, 0, 0);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(128, 128, 255);
             dataGridViewModosPagos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewModosPagos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewModosPagos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewModosPagos.BackgroundColor = Color.FromArgb(255, 224, 192);
+            dataGridViewModosPagos.BackgroundColor = Color.FromArgb(192, 192, 255);
             dataGridViewModosPagos.BorderStyle = BorderStyle.None;
             dataGridViewModosPagos.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridViewModosPagos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle2.Font = new Font("Bahnschrift SemiCondensed", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle2.SelectionBackColor = Color.Blue;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dataGridViewModosPagos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewModosPagos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle3.Font = new Font("Bahnschrift SemiCondensed", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle3.SelectionBackColor = Color.Blue;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dataGridViewModosPagos.DefaultCellStyle = dataGridViewCellStyle3;
@@ -116,16 +116,17 @@
             dataGridViewModosPagos.Name = "dataGridViewModosPagos";
             dataGridViewModosPagos.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle4.Font = new Font("Bahnschrift SemiCondensed", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle4.SelectionBackColor = Color.Blue;
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dataGridViewModosPagos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewModosPagos.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle5.ForeColor = Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle5.SelectionBackColor = Color.Blue;
             dataGridViewModosPagos.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dataGridViewModosPagos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewModosPagos.Size = new Size(1601, 539);
@@ -133,13 +134,13 @@
             // 
             // iconButtonEditar
             // 
-            iconButtonEditar.BackColor = Color.Blue;
+            iconButtonEditar.BackColor = Color.FromArgb(224, 224, 224);
             iconButtonEditar.Font = new Font("Bahnschrift SemiCondensed", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iconButtonEditar.ForeColor = Color.White;
-            iconButtonEditar.IconChar = FontAwesome.Sharp.IconChar.PenClip;
-            iconButtonEditar.IconColor = Color.White;
+            iconButtonEditar.ForeColor = Color.Blue;
+            iconButtonEditar.IconChar = FontAwesome.Sharp.IconChar.Pencil;
+            iconButtonEditar.IconColor = Color.Blue;
             iconButtonEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButtonEditar.Location = new Point(733, 747);
+            iconButtonEditar.Location = new Point(554, 761);
             iconButtonEditar.Name = "iconButtonEditar";
             iconButtonEditar.Size = new Size(226, 63);
             iconButtonEditar.TabIndex = 26;
@@ -150,13 +151,13 @@
             // 
             // iconButtonEliminar
             // 
-            iconButtonEliminar.BackColor = Color.Red;
+            iconButtonEliminar.BackColor = Color.FromArgb(224, 224, 224);
             iconButtonEliminar.Font = new Font("Bahnschrift SemiCondensed", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iconButtonEliminar.ForeColor = Color.White;
-            iconButtonEliminar.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
-            iconButtonEliminar.IconColor = Color.White;
+            iconButtonEliminar.ForeColor = Color.Red;
+            iconButtonEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            iconButtonEliminar.IconColor = Color.Red;
             iconButtonEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButtonEliminar.Location = new Point(1374, 747);
+            iconButtonEliminar.Location = new Point(1068, 761);
             iconButtonEliminar.Name = "iconButtonEliminar";
             iconButtonEliminar.Size = new Size(226, 63);
             iconButtonEliminar.TabIndex = 25;
@@ -167,13 +168,13 @@
             // 
             // iconButtonAgregar
             // 
-            iconButtonAgregar.BackColor = Color.FromArgb(0, 192, 0);
+            iconButtonAgregar.BackColor = Color.FromArgb(224, 224, 224);
             iconButtonAgregar.Font = new Font("Bahnschrift SemiCondensed", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iconButtonAgregar.ForeColor = Color.White;
+            iconButtonAgregar.ForeColor = Color.FromArgb(0, 192, 0);
             iconButtonAgregar.IconChar = FontAwesome.Sharp.IconChar.FileCirclePlus;
-            iconButtonAgregar.IconColor = Color.White;
+            iconButtonAgregar.IconColor = Color.FromArgb(0, 192, 0);
             iconButtonAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButtonAgregar.Location = new Point(60, 747);
+            iconButtonAgregar.Location = new Point(60, 761);
             iconButtonAgregar.Name = "iconButtonAgregar";
             iconButtonAgregar.Size = new Size(226, 63);
             iconButtonAgregar.TabIndex = 24;
@@ -186,7 +187,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 192, 128);
+            BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(1660, 850);
             Controls.Add(iconButtonEditar);
             Controls.Add(iconButtonEliminar);

@@ -70,11 +70,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Bahnschrift SemiBold Condensed", 24F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(255, 128, 0);
-            label2.Location = new Point(42, 26);
+            label2.Font = new Font("Bahnschrift SemiCondensed", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(165, 18);
             label2.Name = "label2";
-            label2.Size = new Size(158, 48);
+            label2.Size = new Size(219, 57);
             label2.TabIndex = 9;
             label2.Text = "Productos:";
             // 
@@ -84,24 +84,24 @@
             dataGridViewProductos.AllowUserToDeleteRows = false;
             dataGridViewProductos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewProductos.BackgroundColor = Color.FromArgb(255, 224, 192);
+            dataGridViewProductos.BackgroundColor = Color.FromArgb(192, 192, 255);
             dataGridViewProductos.BorderStyle = BorderStyle.None;
             dataGridViewProductos.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridViewProductos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle1.Font = new Font("Bahnschrift SemiCondensed", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(128, 128, 255);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle2.Font = new Font("Bahnschrift SemiCondensed", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(128, 128, 255);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridViewProductos.DefaultCellStyle = dataGridViewCellStyle2;
@@ -115,13 +115,13 @@
             // 
             // iconButtonEliminar
             // 
-            iconButtonEliminar.BackColor = Color.Red;
+            iconButtonEliminar.BackColor = Color.FromArgb(224, 224, 224);
             iconButtonEliminar.Font = new Font("Bahnschrift SemiCondensed", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iconButtonEliminar.ForeColor = Color.White;
-            iconButtonEliminar.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
-            iconButtonEliminar.IconColor = Color.White;
+            iconButtonEliminar.ForeColor = Color.Red;
+            iconButtonEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            iconButtonEliminar.IconColor = Color.Red;
             iconButtonEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButtonEliminar.Location = new Point(1572, 807);
+            iconButtonEliminar.Location = new Point(996, 807);
             iconButtonEliminar.Name = "iconButtonEliminar";
             iconButtonEliminar.Size = new Size(226, 63);
             iconButtonEliminar.TabIndex = 14;
@@ -132,11 +132,11 @@
             // 
             // iconButtonAgregar
             // 
-            iconButtonAgregar.BackColor = Color.FromArgb(0, 192, 0);
+            iconButtonAgregar.BackColor = Color.FromArgb(224, 224, 224);
             iconButtonAgregar.Font = new Font("Bahnschrift SemiCondensed", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iconButtonAgregar.ForeColor = Color.White;
+            iconButtonAgregar.ForeColor = Color.FromArgb(0, 192, 0);
             iconButtonAgregar.IconChar = FontAwesome.Sharp.IconChar.FileCirclePlus;
-            iconButtonAgregar.IconColor = Color.White;
+            iconButtonAgregar.IconColor = Color.FromArgb(0, 192, 0);
             iconButtonAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonAgregar.Location = new Point(82, 807);
             iconButtonAgregar.Name = "iconButtonAgregar";
@@ -149,13 +149,13 @@
             // 
             // iconButtonEditar
             // 
-            iconButtonEditar.BackColor = Color.Blue;
+            iconButtonEditar.BackColor = Color.FromArgb(224, 224, 224);
             iconButtonEditar.Font = new Font("Bahnschrift SemiCondensed", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iconButtonEditar.ForeColor = Color.White;
-            iconButtonEditar.IconChar = FontAwesome.Sharp.IconChar.PenClip;
-            iconButtonEditar.IconColor = Color.White;
+            iconButtonEditar.ForeColor = Color.Blue;
+            iconButtonEditar.IconChar = FontAwesome.Sharp.IconChar.Pencil;
+            iconButtonEditar.IconColor = Color.Blue;
             iconButtonEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButtonEditar.Location = new Point(875, 807);
+            iconButtonEditar.Location = new Point(511, 807);
             iconButtonEditar.Name = "iconButtonEditar";
             iconButtonEditar.Size = new Size(226, 63);
             iconButtonEditar.TabIndex = 15;
@@ -168,7 +168,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 192, 128);
+            BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(1871, 939);
             Controls.Add(iconButtonEditar);
             Controls.Add(iconButtonEliminar);

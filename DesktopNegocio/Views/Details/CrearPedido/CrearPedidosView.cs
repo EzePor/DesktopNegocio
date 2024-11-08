@@ -13,6 +13,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace DesktopNegocio.Views.Details.CrearPedido
@@ -49,6 +50,8 @@ namespace DesktopNegocio.Views.Details.CrearPedido
 
         private void initializeDataGrid()
         {
+           
+
             dataTable = new DataTable();
             dataTable.Columns.Add("id", typeof(int));
             dataTable.Columns.Add("ProductoId", typeof(int));

@@ -3,7 +3,9 @@ using DesktopNegocio.Views.Commos;
 using DesktopNegocio.Views.Commos.Impresiones;
 using DesktopNegocio.Views.Commos.Modos_Pagos;
 using DesktopNegocio.Views.Details.CrearPedido;
+using DesktopNegocio.Views.Details.PedidosCompletados;
 using DesktopNegocio.Views.Details.PedidosFiltrados;
+using DesktopNegocio.Views.Details.ResumenPedidos;
 using FontAwesome.Sharp;
 
 
@@ -141,19 +143,22 @@ namespace DesktopNegocio
         {
             ActivateButton(sender, RGBColors.color7);
             labelTituloChildForm.Text = "Resumen de Pedidos";
-            //OpenChildForm(new ResumenPedidosView());
+            OpenChildForm(new ResumenPedidosView());
         }
 
         private void iconButtonPedidosCompletados_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color8);
             labelTituloChildForm.Text = "Pedidos Completados"; 
-            //OpenChildForm(new PedidosCompletadosView());
+            OpenChildForm(new PedidosCompletadosView());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
             Reset();
         }
 
@@ -164,6 +169,7 @@ namespace DesktopNegocio
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = Color.DarkOrange;
             labelTituloChildForm.Text = "Inicio";
+            OpenChildForm(new InicioView());
         }
     }
 }

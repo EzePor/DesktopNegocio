@@ -102,12 +102,12 @@
             // 
             dataGridDetalle.AllowUserToAddRows = false;
             dataGridDetalle.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(224, 224, 224);
             dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle1.SelectionBackColor = Color.Blue;
             dataGridDetalle.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridDetalle.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridDetalle.BackgroundColor = Color.FromArgb(255, 224, 192);
+            dataGridDetalle.BackgroundColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 224, 192);
             dataGridViewCellStyle2.Font = new Font("Bahnschrift SemiCondensed", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -118,10 +118,10 @@
             dataGridDetalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridDetalle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle3.Font = new Font("Bahnschrift SemiCondensed", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(128, 128, 255);
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dataGridDetalle.DefaultCellStyle = dataGridViewCellStyle3;
@@ -146,11 +146,11 @@
             // 
             // iconButton1
             // 
-            iconButton1.BackColor = Color.Gray;
+            iconButton1.BackColor = Color.FromArgb(224, 224, 224);
             iconButton1.Font = new Font("Bahnschrift SemiCondensed", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iconButton1.ForeColor = Color.White;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Close;
-            iconButton1.IconColor = Color.White;
+            iconButton1.ForeColor = Color.Red;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
+            iconButton1.IconColor = Color.Red;
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 35;
             iconButton1.Location = new Point(951, 12);
@@ -165,6 +165,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.ForeColor = Color.White;
             label2.Location = new Point(141, 89);
             label2.Name = "label2";
             label2.Size = new Size(79, 22);
@@ -174,6 +175,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.ForeColor = Color.White;
             label3.Location = new Point(165, 148);
             label3.Name = "label3";
             label3.Size = new Size(55, 22);
@@ -183,6 +185,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.ForeColor = Color.White;
             label4.Location = new Point(584, 94);
             label4.Name = "label4";
             label4.Size = new Size(62, 22);
@@ -192,6 +195,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.ForeColor = Color.White;
             label5.Location = new Point(584, 153);
             label5.Name = "label5";
             label5.Size = new Size(60, 22);
@@ -201,6 +205,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.ForeColor = Color.White;
             label6.Location = new Point(635, 564);
             label6.Name = "label6";
             label6.Size = new Size(104, 22);
@@ -221,7 +226,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 128, 0);
+            BackColor = Color.FromArgb(128, 128, 255);
             ClientSize = new Size(1100, 600);
             Controls.Add(chFuePagado);
             Controls.Add(label6);

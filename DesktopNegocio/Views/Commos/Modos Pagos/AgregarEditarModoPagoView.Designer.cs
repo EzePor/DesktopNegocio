@@ -39,14 +39,15 @@
             // 
             // iconButtonSalir
             // 
-            iconButtonSalir.BackColor = Color.Gray;
+            iconButtonSalir.BackColor = Color.Silver;
             iconButtonSalir.Font = new Font("Bahnschrift SemiCondensed", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             iconButtonSalir.ForeColor = Color.White;
-            iconButtonSalir.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            iconButtonSalir.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
             iconButtonSalir.IconColor = Color.White;
             iconButtonSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonSalir.Location = new Point(1221, 526);
             iconButtonSalir.Name = "iconButtonSalir";
+            iconButtonSalir.Padding = new Padding(25, 0, 0, 0);
             iconButtonSalir.Size = new Size(259, 141);
             iconButtonSalir.TabIndex = 47;
             iconButtonSalir.Text = "Salir";
@@ -64,6 +65,7 @@
             iconButtonGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonGuardar.Location = new Point(1221, 212);
             iconButtonGuardar.Name = "iconButtonGuardar";
+            iconButtonGuardar.Padding = new Padding(25, 0, 0, 0);
             iconButtonGuardar.Size = new Size(259, 141);
             iconButtonGuardar.TabIndex = 46;
             iconButtonGuardar.Text = "Guardar";
@@ -74,10 +76,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Bahnschrift SemiCondensed", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Bahnschrift SemiCondensed", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(444, 89);
             label3.Name = "label3";
-            label3.Size = new Size(389, 41);
+            label3.Size = new Size(533, 57);
             label3.TabIndex = 45;
             label3.Text = "Agregar/Editar Impresiones";
             // 
@@ -93,7 +96,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(111, 448);
+            label8.Location = new Point(194, 448);
             label8.Name = "label8";
             label8.Size = new Size(63, 24);
             label8.TabIndex = 43;
@@ -111,7 +114,7 @@
             // 
             labelNombre.AutoSize = true;
             labelNombre.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNombre.Location = new Point(111, 278);
+            labelNombre.Location = new Point(139, 278);
             labelNombre.Name = "labelNombre";
             labelNombre.Size = new Size(118, 24);
             labelNombre.TabIndex = 41;
@@ -121,7 +124,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 192, 128);
+            BackColor = Color.FromArgb(128, 128, 255);
             ClientSize = new Size(1660, 850);
             Controls.Add(iconButtonSalir);
             Controls.Add(iconButtonGuardar);

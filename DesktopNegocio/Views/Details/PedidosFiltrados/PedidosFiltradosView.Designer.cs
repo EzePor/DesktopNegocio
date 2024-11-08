@@ -31,6 +31,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             cboClientes = new ComboBox();
             label1 = new Label();
             label2 = new Label();
@@ -56,6 +57,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Bahnschrift Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(13, 102);
             label1.Name = "label1";
             label1.Size = new Size(89, 28);
@@ -67,6 +69,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Bahnschrift Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(993, 104);
             label2.Name = "label2";
             label2.Size = new Size(81, 28);
@@ -86,6 +89,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Bahnschrift Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(492, 104);
             label3.Name = "label3";
             label3.Size = new Size(88, 28);
@@ -121,12 +125,12 @@
             // 
             dataGridPedidos.AllowUserToAddRows = false;
             dataGridPedidos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle1.SelectionBackColor = Color.Blue;
             dataGridPedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridPedidos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridPedidos.BackgroundColor = Color.FromArgb(255, 224, 192);
+            dataGridPedidos.BackgroundColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 224, 192);
             dataGridViewCellStyle2.Font = new Font("Bahnschrift SemiCondensed", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -137,19 +141,27 @@
             dataGridPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridPedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(192, 192, 255);
             dataGridViewCellStyle3.Font = new Font("Bahnschrift SemiCondensed", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle3.SelectionBackColor = Color.Blue;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dataGridPedidos.DefaultCellStyle = dataGridViewCellStyle3;
-            dataGridPedidos.Location = new Point(44, 156);
+            dataGridPedidos.Location = new Point(23, 156);
             dataGridPedidos.Name = "dataGridPedidos";
             dataGridPedidos.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle4.Font = new Font("Bahnschrift SemiCondensed", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridPedidos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridPedidos.RowHeadersWidth = 51;
             dataGridPedidos.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dataGridPedidos.Size = new Size(1591, 661);
+            dataGridPedidos.Size = new Size(1625, 673);
             dataGridPedidos.TabIndex = 7;
             dataGridPedidos.CellContentClick += dataGridPedidos_CellContentClick;
             // 
@@ -157,7 +169,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Bahnschrift SemiCondensed", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(255, 128, 0);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(194, 18);
             label4.Name = "label4";
             label4.Size = new Size(371, 72);
@@ -168,7 +180,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 192, 128);
+            BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(1660, 860);
             Controls.Add(label4);
             Controls.Add(dataGridPedidos);
@@ -180,6 +192,7 @@
             Controls.Add(label1);
             Controls.Add(cboClientes);
             Font = new Font("Bahnschrift SemiCondensed", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ForeColor = Color.FromArgb(64, 64, 64);
             FormBorderStyle = FormBorderStyle.None;
             Name = "PedidosFiltradosView";
             Text = "Pedidos Filtrados";

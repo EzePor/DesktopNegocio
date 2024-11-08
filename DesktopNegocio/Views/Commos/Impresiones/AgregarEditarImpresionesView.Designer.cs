@@ -42,7 +42,7 @@
             iconButtonSalir.BackColor = Color.Gray;
             iconButtonSalir.Font = new Font("Bahnschrift SemiCondensed", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             iconButtonSalir.ForeColor = Color.White;
-            iconButtonSalir.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            iconButtonSalir.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
             iconButtonSalir.IconColor = Color.White;
             iconButtonSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonSalir.Location = new Point(1256, 573);
@@ -74,10 +74,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Bahnschrift SemiCondensed", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Bahnschrift SemiCondensed", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(479, 136);
             label3.Name = "label3";
-            label3.Size = new Size(389, 41);
+            label3.Size = new Size(533, 57);
             label3.TabIndex = 38;
             label3.Text = "Agregar/Editar Impresiones";
             // 
@@ -93,7 +94,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(146, 495);
+            label8.Location = new Point(228, 495);
             label8.Name = "label8";
             label8.Size = new Size(63, 24);
             label8.TabIndex = 35;
@@ -111,7 +112,7 @@
             // 
             labelNombre.AutoSize = true;
             labelNombre.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNombre.Location = new Point(146, 325);
+            labelNombre.Location = new Point(218, 325);
             labelNombre.Name = "labelNombre";
             labelNombre.Size = new Size(73, 24);
             labelNombre.TabIndex = 30;
@@ -121,7 +122,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 192, 128);
+            BackColor = Color.FromArgb(128, 128, 255);
             ClientSize = new Size(1660, 850);
             Controls.Add(iconButtonSalir);
             Controls.Add(iconButtonGuardar);

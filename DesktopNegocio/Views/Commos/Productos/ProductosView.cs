@@ -66,14 +66,14 @@ namespace DesktopNegocio.Views.Commos
 
 
 
-        private void iconButtonAgregar_Click(object sender, EventArgs e)
+        private async void iconButtonAgregar_Click(object sender, EventArgs e)
         {
             AgregarEditarProductosView agregarEditarProductosView = new AgregarEditarProductosView();
             agregarEditarProductosView.ShowDialog();
 
             
 
-            CargarGrilla();
+            await CargarGrilla();
         }
 
        

@@ -32,7 +32,7 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
             CargarPedidos();
             CargarCombos();
 
-            dataGridPedidos.CellContentClick += dataGridPedidos_CellContentClick;
+           // dataGridPedidos.CellContentClick += dataGridPedidos_CellContentClick;
 
         }
 
@@ -67,6 +67,8 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
 
         private void ActualizarDataGridView()
         {
+            // reseteo DataGridView 
+            dataGridPedidos.ColumnHeadersDefaultCellStyle = new DataGridViewCellStyle();
             dataGridPedidos.DataSource = null;
             dataGridPedidos.Columns.Clear();
 
@@ -94,7 +96,8 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
             AgregarBotonColumna(dataGridPedidos, "Editar", "Editar", Color.LightGreen, Color.DarkGreen);
             AgregarBotonColumna(dataGridPedidos, "Eliminar", "Eliminar", Color.LightCoral, Color.DarkRed);
 
-
+            // Forzar la actualización de los estilos
+            dataGridPedidos.Refresh();
 
         }
 
@@ -106,12 +109,14 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
                 Text = texto,
                 UseColumnTextForButtonValue = true,
                 FlatStyle = FlatStyle.Flat
+
             };
 
             // Establecer estilos para los botones
+       
             buttonColumn.DefaultCellStyle.BackColor = colorFondo;
             buttonColumn.DefaultCellStyle.ForeColor = colorTexto;
-            buttonColumn.DefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
+            buttonColumn.DefaultCellStyle.Font = new Font("Bahnschrift", 10, FontStyle.Bold);
 
             dataGridPedidos.Columns.Add(buttonColumn);
         }
@@ -148,7 +153,7 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
             ActualizarDataGridView();
         }
 
-        private void dataGridPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void dataGridPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verificar que el clic fue en una columna de botón
             if (e.RowIndex >= 0)
@@ -164,7 +169,7 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
                     DetallePedidoView detalleForm = new DetallePedidoView(pedidoSeleccionado);
                     detalleForm.ShowDialog(); // Mostrar como un cuadro de diálogo modal
                 }
-                else if ( dataGridPedidos.Columns[e.ColumnIndex].Name == "Editar")
+                else if (dataGridPedidos.Columns[e.ColumnIndex].Name == "Editar")
                 {
                     var pedidoSeleccionadoEditar = pedidosFiltrados[e.RowIndex];
                     var EditarPedido = new EditarPedidoView(pedidoSeleccionadoEditar.id);
@@ -175,13 +180,43 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
                     EditarPedido.ShowDialog();
                 }
 
-                else if (dataGridPedidos.Columns[e.ColumnIndex].Name == "Eliminar")
+                else if( dataGridPedidos.Columns[e.ColumnIndex].Name == "Eliminar")
                 {
-                    // Aquí puedes eliminar el pedido seleccionado
-                    MessageBox.Show($"Eliminar pedido ID: ");
-                    // Código para eliminar el pedido y actualizar la grilla
-                }
+                    //Confirmación de eliminación
+                   var confirmResult = MessageBox.Show(
+                       $"¿Está seguro de que desea eliminar el pedido del cliente: {pedidoSeleccionado.cliente}?",
+                       "Confirmar eliminación",
+                       MessageBoxButtons.YesNo,
+                       MessageBoxIcon.Warning
+                   );
 
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            
+                            ShowInActivity.Show("Eliminando pedido ...");
+                            // Llama al servicio para eliminar el pedido
+                            await pedidoService.DeleteAsync(pedidoSeleccionado.id);
+                            ShowInActivity.Hide();
+                            // Elimina el pedido de la lista y actualiza el DataGridView
+                            pedidos.Remove(pedidoSeleccionado);
+                            pedidosFiltrados.Remove(pedidoSeleccionado);
+
+
+                            MessageBox.Show("Pedido eliminado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ActualizarDataGridView();
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error al eliminar el pedido: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+
+                    }
+                    
+                }
             }
             else if (e.RowIndex >= 0 && dataGridPedidos.Columns[e.ColumnIndex].Name == "Editar")
             {

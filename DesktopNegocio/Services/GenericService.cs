@@ -20,7 +20,10 @@ namespace DesktopNegocio.Services
             _endpoint = urlApi + ApiEndPoints.GetEndPoint(typeof(T).Name);
         }
 
-        
+        public GenericService(HttpClient client)
+        {
+            this.client = client;
+        }
 
         public async Task<List<T>?> GetAllAsync()
         {

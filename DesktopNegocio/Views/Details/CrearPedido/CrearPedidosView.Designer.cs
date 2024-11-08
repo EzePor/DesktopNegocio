@@ -31,6 +31,8 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             label1 = new Label();
             cboClientes = new ComboBox();
             cboModoPagos = new ComboBox();
@@ -58,7 +60,6 @@
             label8 = new Label();
             panel2 = new Panel();
             label11 = new Label();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dataGridDetallePedido).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cantidadImpresion).BeginInit();
@@ -156,34 +157,47 @@
             // 
             dataGridDetallePedido.AllowUserToAddRows = false;
             dataGridDetallePedido.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle1.Font = new Font("Bahnschrift SemiBold SemiConden", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle1.SelectionBackColor = Color.Blue;
             dataGridDetallePedido.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridDetallePedido.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridDetallePedido.BackgroundColor = Color.FromArgb(255, 224, 192);
+            dataGridDetallePedido.BackgroundColor = Color.FromArgb(192, 192, 255);
             dataGridDetallePedido.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle2.Font = new Font("Bahnschrift SemiCondensed", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(255, 128, 0);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridViewCellStyle2.BackColor = Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new Font("Bahnschrift SemiBold Condensed", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dataGridDetallePedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridDetallePedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle3.Font = new Font("Bahnschrift SemiCondensed", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle3.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Blue;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dataGridDetallePedido.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridDetallePedido.EnableHeadersVisualStyles = false;
             dataGridDetallePedido.Location = new Point(115, 274);
             dataGridDetallePedido.Name = "dataGridDetallePedido";
             dataGridDetallePedido.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle4.Font = new Font("Bahnschrift SemiBold SemiConden", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridDetallePedido.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridDetallePedido.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle5.Font = new Font("Bahnschrift SemiBold Condensed", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(64, 64, 64);
+            dataGridViewCellStyle5.SelectionBackColor = Color.Blue;
+            dataGridDetallePedido.RowsDefaultCellStyle = dataGridViewCellStyle5;
             dataGridDetallePedido.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dataGridDetallePedido.Size = new Size(1029, 364);
             dataGridDetallePedido.TabIndex = 10;
@@ -191,7 +205,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(255, 128, 0);
+            panel1.BackColor = Color.FromArgb(128, 128, 255);
             panel1.Controls.Add(btnAgregarImpresion);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(cantidadImpresion);
@@ -202,6 +216,7 @@
             panel1.Controls.Add(cantidadProducto);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(cboProductos);
+            panel1.ForeColor = Color.Black;
             panel1.Location = new Point(115, 644);
             panel1.Name = "panel1";
             panel1.Size = new Size(1029, 193);
@@ -332,6 +347,7 @@
             iconButtonGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonGuardar.Location = new Point(1267, 209);
             iconButtonGuardar.Name = "iconButtonGuardar";
+            iconButtonGuardar.Padding = new Padding(25, 0, 0, 0);
             iconButtonGuardar.Size = new Size(259, 141);
             iconButtonGuardar.TabIndex = 48;
             iconButtonGuardar.Text = "Guardar";
@@ -342,17 +358,17 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Bahnschrift SemiCondensed", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.FromArgb(255, 128, 0);
-            label8.Location = new Point(140, 19);
+            label8.Font = new Font("Bahnschrift SemiCondensed", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(270, 9);
             label8.Name = "label8";
-            label8.Size = new Size(191, 41);
+            label8.Size = new Size(260, 57);
             label8.TabIndex = 50;
             label8.Text = "Crear Pedido";
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(255, 128, 0);
+            panel2.BackColor = Color.FromArgb(128, 128, 255);
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(label11);
             panel2.Controls.Add(lbltotalPedido);
@@ -372,29 +388,12 @@
             label11.TabIndex = 6;
             label11.Text = "Total Pedido:";
             // 
-            // iconButton1
-            // 
-            iconButton1.BackColor = Color.Gray;
-            iconButton1.Font = new Font("Bahnschrift SemiCondensed", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iconButton1.ForeColor = Color.White;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Close;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(1267, 696);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(259, 141);
-            iconButton1.TabIndex = 52;
-            iconButton1.Text = "Salir";
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            // 
             // CrearPedidosView
             // 
             AutoScaleDimensions = new SizeF(9F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 192, 128);
+            BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(1660, 860);
-            Controls.Add(iconButton1);
             Controls.Add(panel2);
             Controls.Add(label8);
             Controls.Add(iconButtonGuardar);
@@ -411,6 +410,7 @@
             Controls.Add(cboClientes);
             Controls.Add(label1);
             Font = new Font("Bahnschrift SemiCondensed", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
             Name = "CrearPedidosView";
             Text = "Crear Pedido";
@@ -454,6 +454,5 @@
         private Label label8;
         private Panel panel2;
         private Label label11;
-        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

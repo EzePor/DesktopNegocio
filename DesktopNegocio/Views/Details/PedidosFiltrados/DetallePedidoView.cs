@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,12 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
             InitializeComponent();
             InicializarColumnasDataGrid();
             pedido = pedidoSeleccionado;
+
+            // Configurar estilo del formulario
+            FormBorderStyle = FormBorderStyle.None;
+            BackColor = Color.Gray; // Color de fondo para hacer contraste con el borde
+            Padding = new Padding(2); // Espacio para el borde blanco
+
             CargarDetalle();
         }
 
@@ -59,8 +66,34 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        // Evento Paint para dibujar el borde redondeado
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            int borderRadius = 20;  // Radio de redondeo de esquinas
+            int borderSize = 4;     // Grosor del borde
+
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                // Crear un borde con esquinas redondeadas
+                path.AddArc(0, 0, borderRadius, borderRadius, 180, 90);
+                path.AddArc(Width - borderRadius - 1, 0, borderRadius, borderRadius, 270, 90);
+                path.AddArc(Width - borderRadius - 1, Height - borderRadius - 1, borderRadius, borderRadius, 0, 90);
+                path.AddArc(0, Height - borderRadius - 1, borderRadius, borderRadius, 90, 90);
+                path.CloseFigure();
+
+                // Dibujar el borde
+                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                using (Pen pen = new Pen(Color.White, borderSize))
+                {
+                    e.Graphics.DrawPath(pen, path);
+                }
+            }
         }
     }
 

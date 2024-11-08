@@ -53,7 +53,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(122, 437);
+            label8.Location = new Point(179, 437);
             label8.Name = "label8";
             label8.Size = new Size(63, 24);
             label8.TabIndex = 24;
@@ -71,7 +71,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(122, 518);
+            label2.Location = new Point(185, 515);
             label2.Name = "label2";
             label2.Size = new Size(57, 24);
             label2.TabIndex = 22;
@@ -81,7 +81,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(122, 347);
+            label1.Location = new Point(182, 348);
             label1.Name = "label1";
             label1.Size = new Size(60, 24);
             label1.TabIndex = 20;
@@ -99,7 +99,7 @@
             // 
             labelNombre.AutoSize = true;
             labelNombre.Font = new Font("Bahnschrift SemiCondensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNombre.Location = new Point(122, 267);
+            labelNombre.Location = new Point(168, 267);
             labelNombre.Name = "labelNombre";
             labelNombre.Size = new Size(74, 24);
             labelNombre.TabIndex = 18;
@@ -116,10 +116,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Bahnschrift SemiCondensed", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Bahnschrift SemiCondensed", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(455, 78);
             label3.Name = "label3";
-            label3.Size = new Size(345, 41);
+            label3.Size = new Size(473, 57);
             label3.TabIndex = 27;
             label3.Text = "Agregar/Editar Producto";
             // 
@@ -128,11 +129,12 @@
             iconButtonSalir.BackColor = Color.Gray;
             iconButtonSalir.Font = new Font("Bahnschrift SemiCondensed", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             iconButtonSalir.ForeColor = Color.White;
-            iconButtonSalir.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            iconButtonSalir.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
             iconButtonSalir.IconColor = Color.White;
             iconButtonSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonSalir.Location = new Point(1232, 515);
             iconButtonSalir.Name = "iconButtonSalir";
+            iconButtonSalir.Padding = new Padding(25, 0, 0, 0);
             iconButtonSalir.Size = new Size(259, 141);
             iconButtonSalir.TabIndex = 29;
             iconButtonSalir.Text = "Salir";
@@ -150,6 +152,7 @@
             iconButtonGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonGuardar.Location = new Point(1232, 201);
             iconButtonGuardar.Name = "iconButtonGuardar";
+            iconButtonGuardar.Padding = new Padding(25, 0, 0, 0);
             iconButtonGuardar.Size = new Size(259, 141);
             iconButtonGuardar.TabIndex = 28;
             iconButtonGuardar.Text = "Guardar";
@@ -161,7 +164,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 192, 128);
+            BackColor = Color.FromArgb(128, 128, 255);
             ClientSize = new Size(1660, 850);
             Controls.Add(iconButtonSalir);
             Controls.Add(iconButtonGuardar);

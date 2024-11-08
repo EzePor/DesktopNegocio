@@ -3,6 +3,7 @@ using DesktopNegocio.Interfaces;
 using DesktopNegocio.Models.Commos;
 using DesktopNegocio.Models.Details;
 using DesktopNegocio.Services;
+using DesktopNegocio.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,7 +51,9 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
 
         private async Task CargarPedidoExistente(int pedidoId)
         {
+            ShowInActivity.Show("Descargando/actualizando pedidos ...");
             pedidoActual = await pedidoService.GetByIdAsync(pedidoId);
+            ShowInActivity.Hide();
 
             if (pedidoActual != null)
             {
@@ -324,7 +327,7 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
 
         private void iconButtonSalir_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
