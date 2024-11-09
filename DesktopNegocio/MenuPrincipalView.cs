@@ -9,21 +9,51 @@ using DesktopNegocio.Views.Details.ResumenPedidos;
 using FontAwesome.Sharp;
 
 
+
 namespace DesktopNegocio
 {
+   
     public partial class MenuPrincipalView : Form
     {
+       
+
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+
         public MenuPrincipalView()
         {
             InitializeComponent();
+
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 80);
             panelMenu.Controls.Add(leftBorderBtn);
+
+            // Mostrar el menú principal
+            this.Load += MenuPrincipalView_Load;
+
+          
         }
 
+        private void MenuPrincipalView_Load(object? sender, EventArgs e)
+        {
+            // Abrir el formulario de iniciar sesión al iniciar
+            AbrirIniciarSesion();
+        }
+
+        private void AbrirIniciarSesion()
+        {
+            IniciarSesionView iniciarSesion = new IniciarSesionView();
+
+            // Mostrar como ventana modal y bloquear el menú principal hasta que se cierre
+            var result = iniciarSesion.ShowDialog();
+
+            if (result != DialogResult.OK || !iniciarSesion.loginSuccessfull)
+            {
+                // Si el usuario no se autenticó correctamente, cerrar la aplicación
+                this.Close();
+            }
+        }
         //Estructura de colores
         private struct RGBColors
         {
@@ -101,7 +131,7 @@ namespace DesktopNegocio
         {
             ActivateButton(sender, RGBColors.color1);
             labelTituloChildForm.Text = "Clientes";
-             OpenChildForm(new ClientesView());
+            OpenChildForm(new ClientesView());
         }
 
         private void iconButtonProductos_Click(object sender, EventArgs e)
@@ -149,7 +179,7 @@ namespace DesktopNegocio
         private void iconButtonPedidosCompletados_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color8);
-            labelTituloChildForm.Text = "Pedidos Completados"; 
+            labelTituloChildForm.Text = "Pedidos Completados";
             OpenChildForm(new PedidosCompletadosView());
         }
 
@@ -171,5 +201,7 @@ namespace DesktopNegocio
             labelTituloChildForm.Text = "Inicio";
             OpenChildForm(new InicioView());
         }
+
+       
     }
 }

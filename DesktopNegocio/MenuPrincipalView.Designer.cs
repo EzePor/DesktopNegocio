@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipalView));
             panelMenu = new Panel();
             iconButtonPedidosCompletados = new FontAwesome.Sharp.IconButton();
             iconButtonResumenPedidos = new FontAwesome.Sharp.IconButton();
@@ -382,6 +383,7 @@
             Font = new Font("Bahnschrift SemiBold SemiConden", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ForeColor = Color.Black;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MenuPrincipalView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "GESTIÓN DE NEGOCIO";
