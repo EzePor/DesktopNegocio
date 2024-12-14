@@ -121,6 +121,14 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
             cboModoPagos.ValueMember = "id";
             cboEstadosPedidos.DataSource = Enum.GetValues(typeof(EstadoPedidoEnum));
 
+            // Obtener la lista de productos y ordenarlos alfabéticamente
+            listaProductos = await productoService.GetAllAsync();
+            if (listaProductos != null)
+            {
+                listaProductos = listaProductos.OrderBy(p => p.nombre).ToList();
+            }
+
+
             // Actualizar combos de productos e impresiones
             cboProductos.DataSource = listaProductos;
             cboProductos.DisplayMember = "nombre";

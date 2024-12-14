@@ -47,7 +47,7 @@
             label1.Name = "label1";
             label1.Size = new Size(403, 57);
             label1.TabIndex = 0;
-            label1.Text = "Resúmen de Pedidos";
+            label1.Text = "Resumen de Pedidos";
             // 
             // dataGridResumenPedidos
             // 

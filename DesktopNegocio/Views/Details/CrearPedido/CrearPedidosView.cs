@@ -114,6 +114,7 @@ namespace DesktopNegocio.Views.Details.CrearPedido
 
             // Agregar placeholder al cargar combo clientes
             listaClientes = await clienteService.GetAllAsync();
+            listaClientes = listaClientes.OrderBy(c => c.apellidoNombre).ToList();
             listaClientes.Insert(0, new Cliente { id = 0, apellidoNombre = "Elija un cliente" });
             cboClientes.DataSource = listaClientes;
             cboClientes.DisplayMember = "apellidoNombre";
@@ -122,6 +123,7 @@ namespace DesktopNegocio.Views.Details.CrearPedido
 
             // Agregar placeholder al cargar combo productos
             listaProductos = await productoService.GetAllAsync();
+            listaProductos = listaProductos.OrderBy(p => p.nombre).ToList();
             listaProductos.Insert(0, new Producto { id = 0, nombre = "Elija un producto" });
             cboProductos.DataSource = listaProductos;
             cboProductos.DisplayMember = "nombre";
@@ -130,6 +132,7 @@ namespace DesktopNegocio.Views.Details.CrearPedido
 
             // Agregar placeholder al cargar combo modos de pago
             listaModosPagos = await modoPagoService.GetAllAsync();
+            listaModosPagos = listaModosPagos.OrderBy(m => m.nombre).ToList();
             listaModosPagos.Insert(0, new ModoPago { id = 0, nombre = "Elija el modo de pago" });
             cboModoPagos.DataSource = listaModosPagos;
             cboModoPagos.DisplayMember = "nombre";
@@ -138,6 +141,7 @@ namespace DesktopNegocio.Views.Details.CrearPedido
 
             // Agregar placeholder al cargar combo impresiones
             listaImpresiones = await impresionService.GetAllAsync();
+            listaImpresiones = listaImpresiones.OrderBy(i => i.tamanio).ToList();
             listaImpresiones.Insert(0, new Impresion { id = 0, tamanio = "Elija una impresión" });
             cboImpresiones.DataSource = listaImpresiones;
             cboImpresiones.DisplayMember = "tamanio";

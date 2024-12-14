@@ -42,6 +42,7 @@
             btnInicio = new PictureBox();
             panel1 = new Panel();
             panelTituloMenu = new Panel();
+            btnCerrarApp = new FontAwesome.Sharp.IconButton();
             labelTituloChildForm = new Label();
             iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             panel3 = new Panel();
@@ -306,6 +307,7 @@
             // panelTituloMenu
             // 
             panelTituloMenu.BackColor = Color.FromArgb(64, 64, 64);
+            panelTituloMenu.Controls.Add(btnCerrarApp);
             panelTituloMenu.Controls.Add(labelTituloChildForm);
             panelTituloMenu.Controls.Add(iconCurrentChildForm);
             panelTituloMenu.Dock = DockStyle.Top;
@@ -313,6 +315,21 @@
             panelTituloMenu.Name = "panelTituloMenu";
             panelTituloMenu.Size = new Size(1188, 88);
             panelTituloMenu.TabIndex = 2;
+            // 
+            // btnCerrarApp
+            // 
+            btnCerrarApp.BackColor = Color.FromArgb(64, 64, 64);
+            btnCerrarApp.FlatStyle = FlatStyle.Flat;
+            btnCerrarApp.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            btnCerrarApp.IconColor = Color.White;
+            btnCerrarApp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnCerrarApp.IconSize = 52;
+            btnCerrarApp.Location = new Point(1550, 22);
+            btnCerrarApp.Name = "btnCerrarApp";
+            btnCerrarApp.Size = new Size(63, 60);
+            btnCerrarApp.TabIndex = 2;
+            btnCerrarApp.UseVisualStyleBackColor = false;
+            btnCerrarApp.Click += btnCerrarApp_Click;
             // 
             // labelTituloChildForm
             // 
@@ -419,5 +436,6 @@
         private Panel panel3;
         private Panel panelDesktop;
         private PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton btnCerrarApp;
     }
 }

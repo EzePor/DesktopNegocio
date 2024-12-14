@@ -12,10 +12,10 @@ using FontAwesome.Sharp;
 
 namespace DesktopNegocio
 {
-   
+
     public partial class MenuPrincipalView : Form
     {
-       
+
 
         private IconButton currentBtn;
         private Panel leftBorderBtn;
@@ -32,7 +32,7 @@ namespace DesktopNegocio
             // Mostrar el menú principal
             this.Load += MenuPrincipalView_Load;
 
-          
+
         }
 
         private void MenuPrincipalView_Load(object? sender, EventArgs e)
@@ -202,6 +202,9 @@ namespace DesktopNegocio
             OpenChildForm(new InicioView());
         }
 
-       
+        private void btnCerrarApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
