@@ -287,7 +287,7 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
             if (cboProductos.SelectedItem != null)
             {
                 var producto = (Producto)cboProductos.SelectedItem;
-                var cantidad = 1; // Puedes permitir al usuario ingresar la cantidad si lo deseas
+                int cantidad = (int)cantidadProducto.Value;
                 var precioUnitario = producto.precio;
 
                 if (producto.stock >= cantidad)
@@ -303,6 +303,7 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
                     dataTable.Rows.Add(row);
 
                     CalcularTotalPedido();
+                    ResetProductoFields();
                 }
                 else
                 {
@@ -311,26 +312,50 @@ namespace DesktopNegocio.Views.Details.PedidosFiltrados
             }
         }
 
+        private void ResetProductoFields()
+        {
+            cboProductos.SelectedIndex = -1;
+            cantidadProducto.Value = 1;
+        }
+
         private void btnAgregarImpresion_Click(object sender, EventArgs e)
         {
-            if (cboImpresiones.SelectedItem != null)
+            // obtener valores seleccionados y calcular el total
+            var impresion = cboImpresiones.SelectedItem as Impresion;
+            if (impresion == null)
             {
-                var impresion = (Impresion)cboImpresiones.SelectedItem;
-                var cantidad = 1; // Puedes permitir al usuario ingresar la cantidad si lo deseas
-                var precioUnitario = impresion.precioBase;
-
-                DataRow row = dataTable.NewRow();
-                row["id"] = impresion.id;
-                row["ImpresionId"] = impresion.id;
-                row["nombre"] = impresion.tamanio;
-                row["cantidad"] = cantidad;
-                row["precioUnitario"] = precioUnitario;
-                row["total"] = cantidad * precioUnitario;
-                row["Tipo"] = "Impresion";
-                dataTable.Rows.Add(row);
-
-                CalcularTotalPedido();
+                MessageBox.Show("Debe seleccionar una impresión", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+            int cantidad = (int)cantidadImpresion.Value;
+            decimal precioUnitario = impresion.precioBase;
+            decimal total = cantidad * precioUnitario;
+
+            if (cboImpresiones.SelectedIndex >= 0)
+            {
+                DataRow newRow = dataTable.NewRow();
+                newRow["id"] = impresion.id;
+                newRow["ImpresionId"] = impresion.id;
+                newRow["nombre"] = impresion.tamanio;
+                newRow["cantidad"] = cantidad;
+                newRow["precioUnitario"] = precioUnitario;
+                newRow["total"] = total;
+                newRow["Tipo"] = "Impresion";
+                dataTable.Rows.Add(newRow);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una impresión válida.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            CalcularTotalPedido();
+            ResetImpresionFields();
+        }
+
+        private void ResetImpresionFields()
+        {
+            cboImpresiones.SelectedIndex = -1;
+            cantidadImpresion.Value = 1;
         }
 
         private void iconButtonSalir_Click(object sender, EventArgs e)

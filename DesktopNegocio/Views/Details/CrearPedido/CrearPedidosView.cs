@@ -156,9 +156,16 @@ namespace DesktopNegocio.Views.Details.CrearPedido
 
         private async void btnAgregarProducto_Click(object sender, EventArgs e)
         {
+            // Verificar si se seleccionó un producto
+            if (cboProductos.SelectedIndex <= 0)
+            {
+                MessageBox.Show("Por favor, seleccione un producto válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Obtener valores seleccionados y calcular el total
             var producto = (Producto)cboProductos.SelectedItem;
-            if(producto == null)
+            if (producto == null)
             {
                 MessageBox.Show("Debe seleccionar un producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -177,27 +184,18 @@ namespace DesktopNegocio.Views.Details.CrearPedido
             decimal precioUnitario = producto.precio;
             decimal total = cantidad * precioUnitario;
 
-            //verificar si se selecciono un producto correcto
-            if (cboProductos.SelectedIndex > 0)
-            {
-                DataRow newRow = dataTable.NewRow();
-                newRow["id"] = producto.id;
-                newRow["ProductoId"] = producto.id;
-                newRow["nombre"] = producto.nombre;
-                newRow["cantidad"] = cantidad;
-                newRow["precioUnitario"] = precioUnitario;
-                newRow["total"] = total;
-                newRow["Tipo"] = "Producto";
-                dataTable.Rows.Add(newRow);
-            }
-            else
-            {
-                MessageBox.Show("Por favor, seleccione un producto válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            DataRow newRow = dataTable.NewRow();
+            newRow["id"] = producto.id;
+            newRow["ProductoId"] = producto.id;
+            newRow["nombre"] = producto.nombre;
+            newRow["cantidad"] = cantidad;
+            newRow["precioUnitario"] = precioUnitario;
+            newRow["total"] = total;
+            newRow["Tipo"] = "Producto";
+            dataTable.Rows.Add(newRow);
 
             CalcularTotalPedido();
             ResetProductoFields();
-
         }
 
         private void ResetProductoFields()

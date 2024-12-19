@@ -80,9 +80,9 @@
             label3.ForeColor = Color.White;
             label3.Location = new Point(444, 89);
             label3.Name = "label3";
-            label3.Size = new Size(533, 57);
+            label3.Size = new Size(561, 57);
             label3.TabIndex = 45;
-            label3.Text = "Agregar/Editar Impresiones";
+            label3.Text = "Agregar/Editar Modo de Pago";
             // 
             // txtAjuste
             // 

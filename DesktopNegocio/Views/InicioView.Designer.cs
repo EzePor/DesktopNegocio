@@ -28,22 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Bahnschrift SemiCondensed", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(255, 255, 128);
-            label1.Location = new Point(556, 170);
-            label1.Name = "label1";
-            label1.Size = new Size(473, 72);
-            label1.TabIndex = 0;
-            label1.Text = "Gestión de Negocio";
             // 
             // label2
             // 
@@ -54,7 +42,7 @@
             label2.Name = "label2";
             label2.Size = new Size(797, 41);
             label2.TabIndex = 1;
-            label2.Text = "Sistema de gestíon de clientes,  productos ,  pedidos y más";
+            label2.Text = "Sistema de gestión de clientes,  productos ,  pedidos y más";
             // 
             // pictureBox1
             // 
@@ -74,7 +62,6 @@
             ClientSize = new Size(1660, 860);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "InicioView";
             Text = "Inicio";
@@ -84,8 +71,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private PictureBox pictureBox1;
     }
